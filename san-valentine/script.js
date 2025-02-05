@@ -33,6 +33,15 @@ yesBtn.addEventListener("click", function() {
 
     let smallVideoContainer = document.getElementById("small-video-container");
 
-    smallVideoContainer.style.display = "flex"
+    smallVideoContainer.style.display = "flex";
+
+    let params = {
+        to_email:
+        "alemanayala2024@gmail.com",
+        message: "¡Tu hermosa y maravillosa futura esposa ha aceptado ser tu san valentin!"
+    };
+
+    emailjs.send("service_bgw2jf9","template_m5janef", params).then(function(response){ console.log("correo enviado", response);},
+    function(error) { console.log("error", error);});
 });
 
